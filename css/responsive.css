@@ -30,8 +30,13 @@
 
     .sobre {
         width: 90%;
-        max-width: 320px;
-        height: 240px;
+        max-width: 450px;
+        height: 250px;
+    }
+
+    .tarjeta {
+        width: 85%;
+        height: 180px;
     }
 
     .sello {
