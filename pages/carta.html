@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Carta Para Ti ❤️</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS exclusivo -->
+    <link rel="stylesheet" href="../css/styleCarta.css">
+</head>
+<body>
+    <main class="pagina-carta">
+
+        <!-- Encabezado -->
+        <header class="encabezado-carta">
+            <p class="numero-coleccion">COLECCIÓN Nº V</p>
+            <h1>Una Carta Para Ti</h1>
+            <div class="ornamento">❦</div>
+        </header>
+
+        <!-- Contenedor de la carta estilo pergamino / papel antiguo -->
+        <section class="papel-carta">
+            <div class="sello-postal"></div>
+            
+            <h2 class="saludo-carta">Feliz cumpleaños, mi amor</h2>
+
+            <div class="contenido-texto">
+                <p>
+                    Anoche me pasó lo mismo de siempre: no lograba dormir. Daba vueltas en la cama y, por más que intentaba cerrar los ojos, lo único que veía era tu rostro.
+                </p>
+                <p>
+                    ¿Cómo se supone que uno pueda conciliar el sueño bajo una luna que compartimos, o bajo estrellas que siento que brillan solo por ti? Es imposible, porque tú te has vuelto mis noches, mi descanso y, sobre todo, mis mayores sueños. El sueño de empezar a vivir de verdad, de formar algo más hermoso juntos, el sueño eterno de estar a tu lado.
+                </p>
+                <p>
+                    Hoy, en el día de tu cumpleaños, quiero celebrarte a ti, a la luz que traes a mi vida. Sé que la distancia o los momentos en que no estás a veces hacen que el mundo se sienta un poco más frío y amargo al no poder besar tus labios o perderme en el brillo de tus ojos. Mis noches se vuelven largas cuando te extraño, y lo único que quisiera es tomar el vagón que me lleve directo a ti para abrazarte fuerte y festejar tu existencia.
+                </p>
+                <p>
+                    Dicen que cada vez que nuestro corazón late, produce en silencio el nombre de Dios; pero el mío, en cada segundo y en cada latido de este día, solo susurra un segundo nombre: el tuyo.
+                </p>
+                <p>
+                    Que la vida te regale tanta felicidad como la que tú le das a mi alma. ¡Muy feliz cumpleaños! Te amo.
+                </p>
+            </div>
+
+            <div class="firma-carta">
+                <p>Siempre tuyo,</p>
+                <span class="nombre-remitente">Emanuel</span>
+            </div>
+        </section>
+
+        <!-- Botón Volver -->
+        <div class="volver">
+            <a href="inicio.html">❧ Volver a nuestro mundo</a>
+        </div>
+
+    </main>
+
+    <!-- Etiqueta de audio global con loop para que se repita sola -->
+<audio id="musicaFondo" loop>
+    <source src="../audio/cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById("musicaFondo");
+        
+        // 1. Recuperar el segundo exacto en el que iba la canción antes de cambiar de página
+        const tiempoGuardado = localStorage.getItem("tiempoAudio");
+        if (tiempoGuardado) {
+            audio.currentTime = parseFloat(tiempoGuardado);
+        }
+
+        // 2. Verificar si el sobre ya fue abierto para iniciar la reproducción
+        if (localStorage.getItem("reproducirMusica") === "true") {
+            audio.play().catch(error => {
+                console.log("Esperando interacción del navegador:", error);
+            });
+        }
+
+        // 3. Guardar constantemente el segundo actual de la canción en la memoria del navegador
+        setInterval(function() {
+            if (!audio.paused) {
+                localStorage.setItem("tiempoAudio", audio.currentTime);
+            }
+        }, 1000);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* =========================================
+   ESTILOS PARA LA PÁGINA DE LA CARTA
+========================================= */
+body {
+    background-color:  #f7ebe6;
+    font-family: 'Georgia', serif; /* Fuente elegante con toque clásico */
+    color: #4a3b32;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-carta {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.encabezado-carta {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.numero-coleccion {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #8c6d62;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 5px;
+}
+
+.encabezado-carta h1 {
+    font-size: 1.8rem;
+    color: #5c3a21;
+    margin-bottom: 8px;
+}
+
+.ornamento {
+    color: #b08968;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   ESTILO DEL PAPEL / CARTA
+========================================= */
+.papel-carta {
+    background-color: #fffdf9; /* Color marfil / papel antiguo */
+    border: 1px solid #e6dcd0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(92, 58, 33, 0.08);
+    padding: 40px 45px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sello-postal {
+    text-align: right;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.saludo-carta {
+    font-size: 1.4rem;
+    color: #5c3a21;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenido-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contenido-texto p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #4a3b32;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Firma al final */
+.firma-carta {
+    margin-top: 35px;
+    text-align: right;
+    font-style: italic;
+}
+
+.firma-carta p {
+    margin: 0;
+    color: #795548;
+    font-size: 0.95rem;
+}
+
+.nombre-remitente {
+    display: block;
+    font-size: 1.3rem;
+    color: #5c3a21;
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: 'Arial', sans-serif; /* Para darle contraste a la firma */
+}
+
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
+.volver {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.volver a {
+    text-decoration: none;
+    color: #795548;
+    font-weight: bold;
+    font-size: 0.95rem;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.2s ease;
+}
+
+.volver a:hover {
+    color: #4e342e;
+    text-decoration: underline;
+}
+
+/* Diseño responsivo para pantallas chicas */
+@media (max-width: 576px) {
+    .papel-carta {
+        padding: 25px 20px;
+    }
+}

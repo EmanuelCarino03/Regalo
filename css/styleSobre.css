@@ -1,0 +1,225 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =========================================
+   PÁGINA PRINCIPAL
+========================================= */
+.pagina-inicio {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #5c3035;
+    background-color: #f8e4df;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.6), transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(190, 105, 115, 0.12), transparent 30%);
+}
+
+/* =========================================
+   ORNAMENTOS Y BIENVENIDA
+========================================= */
+.ornamento {
+    font-size: 2.5rem;
+    color: #b86f78;
+    margin-bottom: 10px;
+}
+
+.bienvenida {
+    max-width: 900px;
+    margin-bottom: 5px;
+}
+
+.texto-pequeno {
+    font-size: 1.3rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #8c555b;
+}
+
+.bienvenida h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    color: #63373c;
+    margin-bottom: 15px;
+}
+
+.bienvenida h1 span {
+    display: block;
+    color: #a95260;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.15em;
+}
+
+.separador {
+    font-size: 1.8rem;
+    color: #b86f78;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   CONTENEDOR Y SOBRE 3D
+========================================= */
+.contenedor-sobre {
+    width: 100%;
+    max-width: 750px;
+    perspective: 1000px;
+    margin: 10px auto 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre {
+    position: relative;
+    width: 650px;
+    height: 380px;
+    background: linear-gradient(135deg, #e5b3ac 0%, #d89f98 100%);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(92, 48, 53, 0.2);
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    font-family: inherit;
+    margin: 0 auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sobre:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 45px rgba(92, 48, 53, 0.28);
+}
+
+/* =========================================
+   INTERIOR DEL SOBRE (BOLSILLO TRASERO)
+========================================= */
+.interior-sobre {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #d29892, #e0aba4);
+    /* Dibuja los triángulos laterales altos y baja al centro en punta (V invertida interna) */
+    clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%);
+    z-index: 2;
+}
+
+/* =========================================
+   SOLAPA DEL SOBRE (SUPERIOR)
+========================================= */
+.solapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(135deg, #f3cfca 0%, #e2b7b1 100%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: top center;
+    z-index: 4;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.8s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* =========================================
+   SELLO DE CERA
+========================================= */
+.sello {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #e07a88, #b85563 60%, #8c3f4b 100%);
+    border: 3px solid #75313c;
+    color: #fff;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 20px rgba(70, 20, 25, 0.4), inset 0 2px 3px rgba(255,255,255,0.3);
+    z-index: 5;
+    transition: transform 0.5s ease, opacity 0.4s ease;
+}
+
+/* =========================================
+   CARTA (AHORA SÍ BIEN OCULTA)
+========================================= */
+.carta {
+    position: absolute;
+    left: 50%;
+    bottom: 5px; /* Bajada al límite inferior para que no se asome */
+    transform: translateX(-50%);
+    width: 78%;
+    height: 220px; /* Altura ajustada para que quepa holgada */
+    background: linear-gradient(135deg, #fffcf9, #f7efe6);
+    border: 1px solid #d4c1b0;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6d4245;
+    font-size: 1.5rem;
+    z-index: 1; 
+    transition: bottom 0.9s cubic-bezier(.2, .8, .2, 1), transform 0.9s ease;
+}
+
+.carta span {
+    font-style: italic;
+}
+
+.carta div {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: #a95260;
+}
+
+/* =========================================
+   ESTADOS DE ANIMACIÓN (AL HACER CLIC)
+========================================= */
+.sobre.abriendo .solapa {
+    transform: rotateX(180deg);
+    z-index: 0; 
+}
+
+.sobre.abriendo .sello {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+.sobre.abriendo .carta {
+    bottom: 130px; /* Sube con fuerza al abrirse */
+    z-index: 6; 
+    transform: translateX(-50%) rotate(-1.5deg);
+    box-shadow: 0 15px 30px rgba(80, 40, 40, 0.2);
+}
+
+/* =========================================
+   TEXTO INFERIOR
+========================================= */
+.mensaje-sobre {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #805057;
+    margin-top: 15px;
+}

@@ -1,0 +1,483 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background-color: #f8ebe7;
+
+    color: #5d3a3e;
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+.pagina-inicio {
+
+    min-height: 100vh;
+
+    padding: 70px 25px 50px;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 255, 255, 0.7),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(214, 139, 149, 0.15),
+            transparent 30%
+        ),
+
+        #f8ebe7;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+
+    max-width: 850px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.pequeno-encabezado {
+
+    font-size: 1.1rem;
+
+    font-style: italic;
+
+    color: #a4666f;
+
+    margin-bottom: 18px;
+}
+
+
+.encabezado h1 {
+
+    font-size: clamp(
+        2.5rem,
+        6vw,
+        5rem
+    );
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #61373d;
+
+    margin-bottom: 25px;
+}
+
+
+.encabezado h1 span {
+
+    display: block;
+
+    color: #b86f7b;
+
+    font-style: italic;
+}
+
+
+.introduccion {
+
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: #79565a;
+}
+
+
+/* =========================================
+   ORNAMENTOS
+========================================= */
+
+.ornamento {
+
+    color: #b96f7b;
+
+    font-size: 2rem;
+
+    margin: 10px 0;
+}
+
+
+/* =========================================
+   MENÚ
+========================================= */
+
+.menu-principal {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjeta {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    height: 100%;
+
+    min-height: 370px;
+
+    padding: 35px 30px;
+
+    text-decoration: none;
+
+    color: #684347;
+
+    background-color: #fff9f6;
+
+    border: 1px solid #e2b7b2;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 8px 25px rgba(112, 67, 72, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background-color 0.4s ease;
+}
+
+
+/* Decoración interior */
+
+.tarjeta::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    border: 1px solid rgba(190, 116, 126, 0.25);
+
+    pointer-events: none;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.tarjeta:hover {
+
+    transform: translateY(-8px);
+
+    background-color: #fffdfb;
+
+    color: #684347;
+
+    box-shadow:
+        0 18px 35px rgba(112, 67, 72, 0.15);
+}
+
+
+/* =========================================
+   ICONOS
+========================================= */
+
+.icono {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 75px;
+    height: 75px;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background-color: #f3d5d1;
+
+    border: 1px solid #dca6a2;
+
+    font-size: 2rem;
+
+    transition: transform 0.4s ease;
+}
+
+
+.tarjeta:hover .icono {
+
+    transform: scale(1.08) rotate(-3deg);
+}
+
+
+/* =========================================
+   NÚMEROS ROMANOS
+========================================= */
+
+.numero {
+
+    margin-bottom: 8px;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 3px;
+
+    color: #b46c76;
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.tarjeta h2 {
+
+    min-height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.7rem;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #653d42;
+}
+
+
+/* =========================================
+   LÍNEA DECORATIVA
+========================================= */
+
+.linea {
+
+    width: 55px;
+
+    height: 1px;
+
+    margin: 15px 0 18px;
+
+    background-color: #c78991;
+}
+
+
+/* =========================================
+   DESCRIPCIONES
+========================================= */
+
+.tarjeta > p:not(.numero) {
+
+    max-width: 270px;
+
+    font-size: 0.98rem;
+
+    line-height: 1.7;
+
+    color: #85666a;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BOTÓN / ENTRAR
+========================================= */
+
+.entrar {
+
+    margin-top: auto;
+
+    padding: 8px 18px;
+
+    border-bottom: 1px solid #c88790;
+
+    color: #a95e69;
+
+    font-style: italic;
+
+    transition: all 0.3s ease;
+}
+
+
+.tarjeta:hover .entrar {
+
+    color: #8e4652;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+.pie {
+
+    max-width: 700px;
+
+    margin: 70px auto 0;
+
+    text-align: center;
+
+    color: #805b60;
+}
+
+
+.pie p {
+
+    font-size: 1.1rem;
+
+    font-style: italic;
+
+    line-height: 1.7;
+
+    margin: 10px 0;
+}
+
+
+.pie span {
+
+    font-size: 0.9rem;
+
+    color: #ae7079;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pagina-inicio {
+
+        padding: 50px 18px 40px;
+
+    }
+
+
+    .encabezado {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .encabezado h1 {
+
+        font-size: 3rem;
+
+    }
+
+
+    .introduccion {
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    .tarjeta {
+
+        min-height: 340px;
+
+        padding: 30px 25px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .pagina-inicio {
+
+        padding: 35px 15px;
+
+    }
+
+
+    .encabezado h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .pequeno-encabezado {
+
+        font-size: 1rem;
+
+    }
+
+
+    .ornamento {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    .tarjeta {
+
+        min-height: 320px;
+
+    }
+
+
+    .tarjeta h2 {
+
+        font-size: 1.5rem;
+
+    }
+
+}

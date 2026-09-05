@@ -1,0 +1,182 @@
+/* =========================================
+   ESTILOS GENERALES DE LA PÁGINA DE MENSAJES
+========================================= */
+body {
+    background-color:  #f7ebe6;
+    font-family: 'Arial', sans-serif;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-mensajes {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+.encabezado-chat {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+.numero-chat {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #8c6d62;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.encabezado-chat h1 {
+    font-size: 1.8rem;
+    color: #5c3a21;
+    margin-bottom: 10px;
+}
+
+.ornamento {
+    color: #b08968;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.subtitulo-chat {
+    font-size: 0.95rem;
+    color: #7f6c64;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   CONTENEDOR Y BURBUJAS DE CHAT
+========================================= */
+.contenedor-chat {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(92, 58, 33, 0.08);
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Marca de fecha */
+.marca-fecha {
+    text-align: center;
+    margin: 15px 0 5px 0;
+}
+
+.marca-fecha span {
+    background-color: #efebe9;
+    color: #795548;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Filas de mensajes */
+.fila-mensaje {
+    display: flex;
+    width: 100%;
+}
+
+.fila-mensaje.recibido {
+    justify-content: flex-start;
+}
+
+.fila-mensaje.enviado {
+    justify-content: flex-end;
+}
+
+/* Estilo de la burbuja */
+.burbuja-chat {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fila-mensaje.recibido .burbuja-chat {
+    background-color: #f1ede7;
+    color: #3e2723;
+    border-top-left-radius: 2px;
+}
+
+.fila-mensaje.enviado .burbuja-chat {
+    background-color: #d7ccc8;
+    color: #2c1810;
+    border-top-right-radius: 2px;
+}
+
+/* Textos dentro de la burbuja */
+.remitente {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #6d4c41;
+}
+
+.texto-mensaje {
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.hora-mensaje {
+    display: block;
+    font-size: 0.65rem;
+    text-align: right;
+    color: #8d6e63;
+    margin-top: 4px;
+}
+
+/* =========================================
+   ESTILOS PARA STICKERS
+========================================= */
+.sticker-burbuja {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 5px 10px !important;
+}
+
+.contenido-sticker {
+    background-color: rgba(234, 209, 203, 0.4);
+    border: 1px dashed #d4aba0;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #724d53;
+    text-align: center;
+}
+
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
+.volver {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.volver a {
+    text-decoration: none;
+    color: #795548;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.volver a:hover {
+    color: #4e342e;
+    text-decoration: underline;
+}

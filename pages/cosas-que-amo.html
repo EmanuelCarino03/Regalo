@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo que eres para mí ❤️</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS exclusivo de esta sección -->
+    <link rel="stylesheet" href="../css/styleCosas.css">
+</head>
+
+<body>
+
+    <main class="pagina-cosas">
+
+        <!-- =================================
+            ENCABEZADO
+        ================================== -->
+        <header class="encabezado-cosas">
+            <p class="numero-cosas">
+                COLECCIÓN Nº II
+            </p>
+            <h1>
+                Lo que eres para mí
+            </h1>
+            <div class="ornamento">
+                ❦
+            </div>
+            <p class="subtitulo-cosas">
+                Cinco palabras, cinco formas de nombrar todo lo que significas en mi vida.
+            </p>
+        </header>
+
+        <!-- =================================
+            INTRODUCCIÓN
+        ================================== -->
+        <section class="introduccion-cosas">
+            <p>
+                "Inspirado en aquello que guardo en lo más profundo del corazón; cada una de estas palabras tiene un significado sagrado y eterno para mí."
+            </p>
+        </section>
+
+        <!-- =================================
+            CONTENEDOR DE SIGNIFICADOS
+        ================================== -->
+        <section class="galeria-cosas">
+
+            <!-- ELEMENTO 1: MI TESORO -->
+            <article class="tarjeta-significado">
+                <div class="marco-tarjeta">
+                    <div class="contenido-tarjeta">
+                        <p class="numero-elemento">I</p>
+                        <h2>Mi tesoro</h2>
+                        <div class="linea"></div>
+                        <p class="texto-elemento">
+                            Lo más valioso que la vida me ha dado; un tesoro que cuido, valoro y atesoro con todo el corazón por encima de todo.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ELEMENTO 2: MI ESTRELLA -->
+            <article class="tarjeta-significado">
+                <div class="marco-tarjeta">
+                    <div class="contenido-tarjeta">
+                        <p class="numero-elemento">II</p>
+                        <h2>Mi estrella</h2>
+                        <div class="linea"></div>
+                        <p class="texto-elemento">
+                            Esa luz constante que ilumina mis días más oscuros, guiando mi camino con una gracia y un brillo único que no se apaga jamás.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ELEMENTO 3: MI CORONA -->
+            <article class="tarjeta-significado">
+                <div class="marco-tarjeta">
+                    <div class="contenido-tarjeta">
+                        <p class="numero-elemento">III</p>
+                        <h2>Mi corona</h2>
+                        <div class="linea"></div>
+                        <p class="texto-elemento">
+                            La honra, la dignidad y el orgullo de tenerte a mi lado. <em>“La mujer virtuosa es corona de su marido...”</em> (Proverbios 12:4). Algo que da nobleza y valor a mi vida.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ELEMENTO 4: MI JARDÍN -->
+            <article class="tarjeta-significado">
+                <div class="marco-tarjeta">
+                    <div class="contenido-tarjeta">
+                        <p class="numero-elemento">IV</p>
+                        <h2>Mi jardín</h2>
+                        <div class="linea"></div>
+                        <p class="texto-elemento">
+                            Ese huerto cerrado y precioso que quiero cuidar, regar, proteger y hacer florecer durante todos los días de mi vida con un amor íntimo y exclusivo. 🌿
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ELEMENTO 5: MI CANTO -->
+            <article class="tarjeta-significado">
+                <div class="marco-tarjeta">
+                    <div class="contenido-tarjeta">
+                        <p class="numero-elemento">V</p>
+                        <h2>Mi canto</h2>
+                        <div class="linea"></div>
+                        <p class="texto-elemento">
+                            Aquello que hace que mi corazón tenga siempre una melodía que entonar; la alegría que llena mis días de música y felicidad. ❤️
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- =================================
+            FINAL
+        ================================== -->
+        <section class="final-cosas">
+            <div class="ornamento">
+                ❧ ♡ ❧
+            </div>
+            <p>
+                Y cada una de estas palabras se resume en una sola verdad...
+            </p>
+            <span>
+                Te amo profundamente.
+            </span>
+        </section>
+
+        <!-- =================================
+            VOLVER
+        ================================== -->
+        <div class="volver">
+            <a href="inicio.html">
+                ❧ Volver a nuestro mundo
+            </a>
+        </div>
+
+    </main>
+
+    <script src="../javascript/museo.js"></script>
+    <!-- Etiqueta de audio global con loop para que se repita sola -->
+<audio id="musicaFondo" loop>
+    <source src="../audio/cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById("musicaFondo");
+        
+        // 1. Recuperar el segundo exacto en el que iba la canción antes de cambiar de página
+        const tiempoGuardado = localStorage.getItem("tiempoAudio");
+        if (tiempoGuardado) {
+            audio.currentTime = parseFloat(tiempoGuardado);
+        }
+
+        // 2. Verificar si el sobre ya fue abierto para iniciar la reproducción
+        if (localStorage.getItem("reproducirMusica") === "true") {
+            audio.play().catch(error => {
+                console.log("Esperando interacción del navegador:", error);
+            });
+        }
+
+        // 3. Guardar constantemente el segundo actual de la canción en la memoria del navegador
+        setInterval(function() {
+            if (!audio.paused) {
+                localStorage.setItem("tiempoAudio", audio.currentTime);
+            }
+        }, 1000);
+    });
+</script>
+</body>
+
+</html>

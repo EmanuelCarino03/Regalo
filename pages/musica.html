@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Canción ❤️</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS exclusivo -->
+    <link rel="stylesheet" href="../css/styleMusica.css">
+</head>
+
+<body>
+    <main class="pagina-musica">
+
+        <!-- Encabezado -->
+        <header class="encabezado-cancion">
+            <p class="numero-coleccion">COLECCIÓN Nº IV</p>
+            <h1>Nuestra Canción</h1>
+            <div class="ornamento">❦</div>
+        </header>
+
+        <!-- Frase / Dedicatoria inicial -->
+        <section class="contenedor-dedicatoria">
+            <p class="frase-especial">
+                "Tú me has hechizado en cuerpo y alma, y te amo, te amo, te amo. A partir de este día no quiero
+                separarme nunca más de ti."
+            </p>
+        </section>
+
+        <!-- Letra de la canción -->
+        <section class="contenedor-letra">
+
+            <div class="text-center mb-4">
+                <h2 class="titulo-cancion">Photograph</h2>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Verso 1]</span>
+                <p>Querer puede doler</p>
+                <p>Querer puede doler a veces</p>
+                <p>Pero es lo único que conozco</p>
+                <p>Y cuando se pone difícil</p>
+                <p>Sabes que puede ser difícil a veces</p>
+                <p>Es lo único que nos hace sentir vivos</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Pre-Estribillo]</span>
+                <p>Guardamos este amor en una fotografía</p>
+                <p>Hicimos estos recuerdos para nosotros</p>
+                <p>Donde nuestros ojos nunca se cierran</p>
+                <p>Los corazones nunca se rompen</p>
+                <p>Y el tiempo está congelado para siempre</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Estribillo]</span>
+                <p>Así que puedes guardarme</p>
+                <p>Dentro del bolsillo de tus vaqueros rotos</p>
+                <p>Sujetándome cerca hasta que nuestras miradas se crucen</p>
+                <p>Nunca estarás sola</p>
+                <p>Espera a que vuelva a casa</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Verso 2]</span>
+                <p>Querer puede curar</p>
+                <p>Querer puede remendar tu alma</p>
+                <p>Y es lo único que conozco, lo sé</p>
+                <p>Te juro que se volverá más fácil</p>
+                <p>Recuerda eso con cada pedazo de ti</p>
+                <p>Mm, y es lo único que nos llevamos cuando morimos</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Pre-Estribillo]</span>
+                <p>Mm, guardamos este amor en esta fotografía</p>
+                <p>Hicimos estos recuerdos para nosotros</p>
+                <p>Donde nuestros ojos nunca se cierran</p>
+                <p>Los corazones nunca se rompieron</p>
+                <p>Y el tiempo está congelado para siempre</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Estribillo]</span>
+                <p>Así que puedes guardarme</p>
+                <p>Dentro del bolsillo de tus vaqueros rotos</p>
+                <p>Sujetándome cerca hasta que nuestras miradas se crucen</p>
+                <p>Nunca estarás sola</p>
+                <p>Y si me haces daño</p>
+                <p>Bueno, no pasa nada, nena, solo sangran las palabras</p>
+                <p>Dentro de estas páginas, solo abrázame</p>
+                <p>Y nunca te dejaré marchar</p>
+                <p>Espera a que vuelva a casa</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Puente]</span>
+                <p>Espera a que vuelva a casa</p>
+                <p>Espera a que vuelva a casa</p>
+                <p>Espera a que vuelva a casa</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Estribillo Final]</span>
+                <p>Oh, puedes llevarme</p>
+                <p>Dentro de ese colgante que te dieron a los dieciséis</p>
+                <p>Junto al latido de tu corazón, donde debería estar</p>
+                <p>Guárdalo en lo más profundo de tu alma</p>
+                <p>Y si me haces daño</p>
+                <p>Bueno, no pasa nada, nena, solo sangran las palabras</p>
+                <p>Dentro de estas páginas, solo abrázame</p>
+                <p>Y nunca te dejaré marchar</p>
+            </div>
+
+            <div class="bloque-verso">
+                <span class="etiqueta-verso">[Final]</span>
+                <p>Cuando esté lejos, recordaré cómo me besaste</p>
+                <p>Bajo la farola allá en Sixth Street</p>
+                <p>Escuchándote susurrar por el teléfono:</p>
+                <p class="verso-destacado">"Espera a que vuelva a casa"</p>
+            </div>
+        </section>
+
+        <!-- Botón Volver -->
+        <div class="volver">
+            <a href="inicio.html">❧ Volver a nuestro mundo</a>
+        </div>
+
+    </main>
+
+    <!-- Etiqueta de audio global con loop para que se repita sola -->
+<audio id="musicaFondo" loop>
+    <source src="../audio/cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById("musicaFondo");
+        
+        // 1. Recuperar el segundo exacto en el que iba la canción antes de cambiar de página
+        const tiempoGuardado = localStorage.getItem("tiempoAudio");
+        if (tiempoGuardado) {
+            audio.currentTime = parseFloat(tiempoGuardado);
+        }
+
+        // 2. Verificar si el sobre ya fue abierto para iniciar la reproducción
+        if (localStorage.getItem("reproducirMusica") === "true") {
+            audio.play().catch(error => {
+                console.log("Esperando interacción del navegador:", error);
+            });
+        }
+
+        // 3. Guardar constantemente el segundo actual de la canción en la memoria del navegador
+        setInterval(function() {
+            if (!audio.paused) {
+                localStorage.setItem("tiempoAudio", audio.currentTime);
+            }
+        }, 1000);
+    });
+</script>
+</body>
+
+</html>

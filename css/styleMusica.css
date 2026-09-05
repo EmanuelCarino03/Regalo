@@ -1,0 +1,120 @@
+/* =========================================
+   ESTILOS PARA LA PÁGINA DE MÚSICA
+========================================= */
+body {
+    background-color:  #f7ebe6;
+    font-family: 'Arial', sans-serif;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-musica {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.encabezado-cancion {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.numero-coleccion {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #8c6d62;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.encabezado-cancion h1 {
+    font-size: 1.8rem;
+    color: #5c3a21;
+    margin-bottom: 8px;
+}
+
+.ornamento {
+    color: #b08968;
+    font-size: 1.2rem;
+}
+
+/* Contenedor de la frase inicial (Dedicatoria) */
+.contenedor-dedicatoria {
+    background-color: #ffffff;
+    border-left: 4px solid #b08968;
+    border-radius: 0 12px 12px 0;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(92, 58, 33, 0.05);
+}
+
+.frase-especial {
+    font-style: italic;
+    color: #5c3a21;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+/* Contenedor de la letra */
+.contenedor-letra {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(92, 58, 33, 0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.bloque-verso {
+    text-align: center;
+}
+
+.etiqueta-verso {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #8c6d62;
+    background-color: #efebe9;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bloque-verso p {
+    font-size: 0.95rem;
+    color: #4a3b32;
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.verso-destacado {
+    font-style: italic;
+    font-weight: bold;
+    color: #5c3a21;
+}
+
+/* Botón Volver */
+.volver {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.volver a {
+    text-decoration: none;
+    color: #795548;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.volver a:hover {
+    color: #4e342e;
+    text-decoration: underline;
+}

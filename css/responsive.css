@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+
+    .pagina-inicio {
+
+        padding: 40px 15px;
+
+    }
+
+
+    .bienvenida h1 {
+
+        font-size: 3rem;
+
+    }
+
+
+    .texto-pequeno {
+
+        font-size: 1rem;
+
+    }
+
+
+    .sobre {
+
+        height: 260px;
+
+    }
+
+
+    .sello {
+
+        width: 70px;
+        height: 70px;
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .mensaje-sobre {
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .pagina-inicio {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .bienvenida h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .ornamento {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .sobre {
+
+        height: 220px;
+
+    }
+
+
+    .btn-regalo {
+
+        padding: 13px 25px;
+
+        font-size: 1rem;
+
+    }
+
+}
