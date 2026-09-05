@@ -28,19 +28,22 @@
         font-size: 1rem;
     }
 
-    .sobre {
-        width: 90%;
-        max-width: 450px;
-        height: 250px;
+.sobre {
+        width: 90% !important;
+        max-width: 420px !important;
+        height: 220px !important;
+        position: relative !important; /* Necesario para que la tarjeta se posicione bien respecto al sobre */
+        margin-top: 40px !important; /* Da espacio arriba para que la tarjeta no choque con el texto de bienvenida */
     }
 
 .tarjeta {
         width: 85% !important;
-        height: 180px !important;
+        height: 160px !important;
         position: absolute !important;
-        top: -20px !important; 
+        top: -60px !important; /* ¡Negativo para que suba y se asome bien! */
         left: 50% !important;
         transform: translateX(-50%) !important;
+        z-index: 10;
     }
 
     .sello {
@@ -52,6 +55,17 @@
     .mensaje-sobre {
         font-size: 1rem;
     }
+
+    img, .foto-container, .museo-img, .galeria img {
+        width: 92% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        border-radius: 8px;
+    }
+
 }
 
 @media (max-width: 480px) {
