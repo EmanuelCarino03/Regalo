@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-    /* 1. Configuración general de pantalla */
+    /* 1. Ajustes generales de pantalla */
     html, body {
         background-color: #3b141c;
         margin: 0;
@@ -12,7 +12,7 @@
     .pagina-inicio {
         width: 100%;
         min-height: 100vh;
-        padding: 40px 15px;
+        padding: 30px 10px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -21,53 +21,75 @@
     }
 
     .bienvenida h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .texto-pequeno, .mensaje-sobre {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
-    /* 2. Ajuste de tamaño para que el sobre quepa bien en celular sin romper su estructura */
+    /* 2. Escalado perfecto del sobre en móvil para que la carta NO se asome antes de tiempo */
     .sobre {
-        transform: scale(0.85); /* Reduce un poquito el tamaño general del sobre para que no desborde pantallas chicas */
-        margin: 20px auto;
+        width: 320px !important;
+        height: 210px !important;
+        transform: scale(0.95);
+        margin: 10px auto !important;
     }
 
-    /* 3. Galería y ajuste de imágenes (Obra 1) */
-    img, .foto-container, .museo-img, .galeria img {
-        width: 92% !important;
-        max-width: 100% !important;
+    .carta {
+        height: 130px !important;
+        font-size: 1.1rem !important;
+    }
+
+    .carta div {
+        font-size: 1.3rem !important;
+        margin-top: 5px !important;
+    }
+
+    .sobre.abriendo .carta {
+        bottom: 95px !important;
+    }
+
+    /* 3. Corrección radical para el Museo y la imagen horizontal (Obra 1) */
+    .pagina-museo {
+        padding: 40px 15px !important;
         box-sizing: border-box !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        display: block !important;
-        border-radius: 8px;
     }
 
-    .obra .marco-fotografia {
+    .galeria-museo {
+        width: 100% !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .obra {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Anulamos la rotación loca en celulares para que el marco respete los márgenes */
+    .marco-fotografia, 
+    .marco-fotografia.girada {
         transform: none !important;
-        width: 92% !important;
+        width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        margin: 0 auto 15px auto !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
     }
 
-    .obra .fotografia img {
+    /* Hacemos que la foto horizontal respire y encaje perfecto sin salirse */
+    .fotografia {
         width: 100% !important;
         height: auto !important;
-        object-fit: contain !important;
-        border-radius: 6px;
+        aspect-ratio: 4 / 3 !important; /* Ajuste óptimo para horizontal en móvil */
     }
 
-    .obra, .marco-fotografia, .fotografia, img[src*="primeraFoto.jpg"] {
-        width: 90% !important;
-        max-width: 90% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        box-sizing: border-box !important;
+    .fotografia img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Muestra la foto completa sin recortarla ni pegarla a los bordes */
     }
-
 }
 
 @media (max-width: 480px) {
