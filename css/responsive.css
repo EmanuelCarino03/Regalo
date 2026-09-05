@@ -34,9 +34,13 @@
         height: 250px;
     }
 
-    .tarjeta {
-        width: 85%;
-        height: 180px;
+.tarjeta {
+        width: 85% !important;
+        height: 180px !important;
+        position: absolute !important;
+        top: -20px !important; 
+        left: 50% !important;
+        transform: translateX(-50%) !important;
     }
 
     .sello {
