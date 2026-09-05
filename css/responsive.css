@@ -1,9 +1,5 @@
-/* ===================================================
-   ESTILOS RESPONSIVOS PARA MÓVILES (Max-width: 768px)
-   =================================================== */
 @media (max-width: 768px) {
-    
-    /* 1. Configuración general de pantalla y contenedor */
+    /* 1. Configuración general de pantalla */
     html, body {
         background-color: #3b141c;
         margin: 0;
@@ -24,7 +20,6 @@
         justify-content: center;
     }
 
-    /* 2. Tipografía general */
     .bienvenida h1 {
         font-size: 2.5rem;
     }
@@ -33,52 +28,13 @@
         font-size: 1rem;
     }
 
-    .sello {
-        width: 60px;
-        height: 60px;
-        font-size: 1.3rem;
-    }
-
-    /* 3. El sobre y la carta unificados */
+    /* 2. Ajuste de tamaño para que el sobre quepa bien en celular sin romper su estructura */
     .sobre {
-        width: 90% !important;
-        max-width: 360px !important;
-        height: 200px !important;
-        position: relative !important;
-        margin-top: 40px !important;
-        overflow: visible !important;
+        transform: scale(0.85); /* Reduce un poquito el tamaño general del sobre para que no desborde pantallas chicas */
+        margin: 20px auto;
     }
 
-    .carta, .tarjeta {
-        width: 85% !important;
-        height: 160px !important;
-        position: absolute !important;
-        bottom: 10px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        background: linear-gradient(135deg, #fffcf9, #f7efe6) !important;
-        border: 1px solid #d4c1b0 !important;
-        border-radius: 6px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        z-index: 5 !important;
-    }
-
-    .carta h2, .tarjeta h2 {
-        font-size: 1.4rem !important;
-        color: #6d4245 !important;
-        margin: 0 !important;
-    }
-
-    .carta p, .tarjeta p {
-        font-size: 1.1rem !important;
-        color: #a95260 !important;
-        margin: 5px 0 0 0 !important;
-    }
-
-    /* 4. Galería y ajuste de imágenes */
+    /* 3. Galería y ajuste de imágenes (Obra 1) */
     img, .foto-container, .museo-img, .galeria img {
         width: 92% !important;
         max-width: 100% !important;
@@ -89,7 +45,6 @@
         border-radius: 8px;
     }
 
-    /* 5. Corrección específica de la primera obra (foto horizontal) */
     .obra .marco-fotografia {
         transform: none !important;
         width: 92% !important;
@@ -104,6 +59,15 @@
         object-fit: contain !important;
         border-radius: 6px;
     }
+
+    .obra, .marco-fotografia, .fotografia, img[src*="primeraFoto.jpg"] {
+        width: 90% !important;
+        max-width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+
 }
 
 @media (max-width: 480px) {
