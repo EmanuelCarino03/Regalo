@@ -223,3 +223,48 @@ body {
     color: #805057;
     margin-top: 15px;
 }
+
+/* =========================================
+   ADAPTACIÓN RESPONSIVE PARA MÓVILES
+========================================= */
+@media (max-width: 768px) {
+    .pagina-inicio {
+        padding: 20px 10px;
+    }
+
+    .bienvenida h1 {
+        font-size: 2.3rem;
+    }
+
+    /* Reducimos el sobre proporcionalmente para que quepa en cualquier celular */
+    .sobre {
+        width: 320px !important;
+        height: 200px !important;
+    }
+
+    /* Ocultamos por completo la carta dentro del sobre pequeño sin que se asome */
+    .carta {
+        width: 85% !important;
+        height: 110px !important;
+        bottom: 2px !important;
+        font-size: 1.1rem !important;
+        background: #fffcf9 !important; /* Fondo blanco sólido y nítido */
+        color: #6d4245 !important;     /* Letras oscuras y legibles (no grises) */
+    }
+
+    .carta div {
+        font-size: 1.3rem !important;
+        margin-top: 5px !important;
+    }
+
+    .sello {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.3rem !important;
+    }
+
+    /* Altura a la que sube la carta al abrirse en el celular */
+    .sobre.abriendo .carta {
+        bottom: 100px !important;
+    }
+}
