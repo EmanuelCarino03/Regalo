@@ -267,28 +267,6 @@ body {
     transform-origin: center center;
 }
 
-@media (max-width: 768px) {
-    .marco-fotografia.girada {
-        transform: rotate(0deg) !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        margin: 0 auto 20px auto !important;
-    }
-    
-    .fotografia {
-        width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-    }
-
-    .fotografia img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: contain !important;
-    }
-}
-
 /* =========================================
    INFORMACIÓN
 ========================================= */
