@@ -1,88 +1,70 @@
+/* Asegurar que el fondo cubra toda la pantalla en móviles y evitar desbordamientos */
 @media (max-width: 768px) {
+    html, body {
+        background-color: #3b141c; /* El color vino general de tu temática */
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
 
     .pagina-inicio {
-
+        width: 100%;
+        min-height: 100vh;
         padding: 40px 15px;
-
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
 
     .bienvenida h1 {
-
-        font-size: 3rem;
-
+        font-size: 2.5rem;
     }
-
 
     .texto-pequeno {
-
         font-size: 1rem;
-
     }
-
 
     .sobre {
-
-        height: 260px;
-
+        width: 90%;
+        max-width: 320px;
+        height: 240px;
     }
-
 
     .sello {
-
-        width: 70px;
-        height: 70px;
-
-        font-size: 1.5rem;
-
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
     }
-
 
     .mensaje-sobre {
-
-        font-size: 1.1rem;
-
+        font-size: 1rem;
     }
-
 }
 
-
 @media (max-width: 480px) {
-
     .pagina-inicio {
-
-        padding: 30px 15px;
-
+        padding: 20px 10px;
     }
-
 
     .bienvenida h1 {
-
-        font-size: 2.5rem;
-
+        font-size: 2.1rem;
     }
-
 
     .ornamento {
-
-        font-size: 2.2rem;
-
+        font-size: 1.8rem;
     }
-
 
     .sobre {
-
-        height: 220px;
-
+        width: 92%;
+        height: 200px;
     }
-
 
     .btn-regalo {
-
-        padding: 13px 25px;
-
-        font-size: 1rem;
-
+        padding: 10px 20px;
+        font-size: 0.95rem;
     }
-
 }
