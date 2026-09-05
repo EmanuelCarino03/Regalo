@@ -1,7 +1,11 @@
-/* Asegurar que el fondo cubra toda la pantalla en móviles y evitar desbordamientos */
+/* ===================================================
+   ESTILOS RESPONSIVOS PARA MÓVILES (Max-width: 768px)
+   =================================================== */
 @media (max-width: 768px) {
+    
+    /* 1. Configuración general de pantalla y contenedor */
     html, body {
-        background-color: #3b141c; /* El color vino general de tu temática */
+        background-color: #3b141c;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -20,30 +24,13 @@
         justify-content: center;
     }
 
+    /* 2. Tipografía general */
     .bienvenida h1 {
         font-size: 2.5rem;
     }
 
-    .texto-pequeno {
+    .texto-pequeno, .mensaje-sobre {
         font-size: 1rem;
-    }
-
-.sobre {
-        width: 90% !important;
-        max-width: 420px !important;
-        height: 220px !important;
-        position: relative !important; /* Necesario para que la tarjeta se posicione bien respecto al sobre */
-        margin-top: 40px !important; /* Da espacio arriba para que la tarjeta no choque con el texto de bienvenida */
-    }
-
-.tarjeta {
-        width: 85% !important;
-        height: 160px !important;
-        position: absolute !important;
-        top: -60px !important; /* ¡Negativo para que suba y se asome bien! */
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        z-index: 10;
     }
 
     .sello {
@@ -52,10 +39,46 @@
         font-size: 1.3rem;
     }
 
-    .mensaje-sobre {
-        font-size: 1rem;
+    /* 3. El sobre y la carta unificados */
+    .sobre {
+        width: 90% !important;
+        max-width: 360px !important;
+        height: 200px !important;
+        position: relative !important;
+        margin-top: 40px !important;
+        overflow: visible !important;
     }
 
+    .carta, .tarjeta {
+        width: 85% !important;
+        height: 160px !important;
+        position: absolute !important;
+        bottom: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        background: linear-gradient(135deg, #fffcf9, #f7efe6) !important;
+        border: 1px solid #d4c1b0 !important;
+        border-radius: 6px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 5 !important;
+    }
+
+    .carta h2, .tarjeta h2 {
+        font-size: 1.4rem !important;
+        color: #6d4245 !important;
+        margin: 0 !important;
+    }
+
+    .carta p, .tarjeta p {
+        font-size: 1.1rem !important;
+        color: #a95260 !important;
+        margin: 5px 0 0 0 !important;
+    }
+
+    /* 4. Galería y ajuste de imágenes */
     img, .foto-container, .museo-img, .galeria img {
         width: 92% !important;
         max-width: 100% !important;
@@ -66,6 +89,21 @@
         border-radius: 8px;
     }
 
+    /* 5. Corrección específica de la primera obra (foto horizontal) */
+    .obra .marco-fotografia {
+        transform: none !important;
+        width: 92% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 15px auto !important;
+    }
+
+    .obra .fotografia img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        border-radius: 6px;
+    }
 }
 
 @media (max-width: 480px) {
